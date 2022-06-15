@@ -21,7 +21,7 @@ public class AddUserHandler : IRequestHandler<AddUserCommand, UserModel>
             Id = Guid.NewGuid(),
             FirstName = request.FirstName,
             LastName = request.LastName,
-            Username = request.Username,
+            User = request.Username,
             Password = request.Password,
             Balance = 0,
             RegistrationDate = DateTime.Now

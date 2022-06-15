@@ -1,3 +1,4 @@
+using Auth_Validator_MediatR.Dtos;
 using Auth_Validator_MediatR.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -8,7 +9,7 @@ public class UserContext : DbContext
     public UserContext(DbContextOptions<UserContext> options) : base(options) {}
     
     public DbSet<UserModel> UsersTable { get; set; }
-    
+
     protected override void OnModelCreating(ModelBuilder builder)
     {
         builder.Entity<UserModel>().HasKey(m => m.Id);

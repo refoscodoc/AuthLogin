@@ -1,11 +1,13 @@
 using Auth_Validator_MediatR.Commands;
 using Auth_Validator_MediatR.Queries;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Auth_Validator_MediatR.Controllers;
 
 [ApiController]
+[Authorize]
 [Route("[controller]")]
 public class UserController : ControllerBase
 {
